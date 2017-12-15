@@ -1,6 +1,6 @@
 package cc.xiaoerbi.service;
 
-import cc.xiaoerbi.dao.UserDao;
+import cc.xiaoerbi.dao.UserMybitysDao;
 import cc.xiaoerbi.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class CommonService {
     @Autowired
-    private UserDao userDao;
+    private UserMybitysDao userMybitysDao;
 
     public int addUser(User user) {
-        return userDao.insert(user);
+        return userMybitysDao.insert(user);
     }
 }
